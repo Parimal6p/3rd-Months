@@ -1,0 +1,21 @@
++------------+       +---------------+       +------------+
+|   cities   |       | weather_data  |       |   alerts   |
++------------+       +---------------+       +------------+
+| city_id PK |------<| city_id FK    |       | city_id FK |
+| city_name  |       | temperature   |       | alert_type |
+| country    |       | humidity      |       | message    |
+| latitude   |       | pressure      |       | created_at |
+| longitude  |       | wind_speed    |       +------------+
++------------+       | condition     |
+                     | timestamp     |
+                     +---------------+
+
+                +------------------+
+                |  pipeline_logs   |
+                +------------------+
+                | log_id PK        |
+                | run_time         |
+                | status           |
+                | records_processed|
+                | error_message    |
+                +------------------+
